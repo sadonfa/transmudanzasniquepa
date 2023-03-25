@@ -1,0 +1,178 @@
+{% extends 'layout/index.html' %}
+
+{% block title %} Inicio {% endblock  %} 
+
+{% block content %}
+
+
+<header class="header">
+    <div class="description-bg">
+        <div class="description-detail">
+            <h1>¿No tienes tiempo?</h1>
+            <p>
+                Con nuestro servicio de embalaje nosotros te ahorramos
+                el tiempo de empacar tus pertenecias, ya que hacemos el
+                trabajo pesado por ti, no dudes en contactarnos y te
+                brindaremos toda la informacion pertinente.
+
+            </p>
+            <a href="https://api.whatsapp.com/send/?phone=573053118583" class="btn" target="_blank">
+                Contactanos
+            </a>
+        </div>
+
+    </div>
+</header>
+
+<div class="about">
+    <div class="detail-about">
+
+        <h2>Nosotros</h2>
+
+        <p>
+            Experiencia, responsabilidad, compromiso y atención personalizada
+            hacen a nuestro servicio uno de los mejores.
+            <br /><br />
+            Nuestro experiencia nos ayuda a brindarles el servicio que usted
+            necesita en términos de calidad, y a la vez siendo capaces de ofrecer el precio más competitivo del
+            mercado.
+
+        </p>
+        <a href="{% url 'about'%}" class="btn">
+            Leer Mas
+        </a>
+    </div>
+
+    <div class="form-about">
+        <h3>Cotizacion</h3>
+        {% if form.errors %}
+            
+        <div class="danger">
+            Hay errores en el formulario!!
+        </div>
+
+        {% endif %}
+
+        {% if messages %}
+        
+        {% for mess in messages  %}
+        
+        <div class="success" >
+            {{mess}}
+        </div>
+
+        {% endfor %}
+
+        {% endif %}
+        <form action="" method="POST">
+            {% csrf_token %}
+             {{ form }}
+            <input type="submit" class="btn" value="Cotizar">
+        </form>
+    </div>
+
+</div>
+
+<div class="services">
+    <div class="services-detail">
+        <ul>
+            <li>
+                <i class="fa-sharp fa-regular fa-location-dot"></i>
+                <div class="service-info">
+                    <h3>Mudanzas Nacionales</h3>
+                    <p>
+                        En este servicio ofrecemos el transporte de sus envíos y mudanzas a nivel
+                        nacional, con tapete al piso...
+
+                    </p>
+                    <a href="{% url 'services'%}">Leer Mas</a>
+                </div>
+
+            </li>
+            <li>
+                <i class="fa-solid fa-truck-ramp-box"></i>
+                <div class="service-info">
+                    <h3>Mudanzas Locales</h3>
+                    <p>
+                        Contamos con servicio de mudanzas dentro de la ciudad ayudando
+                        en su traslado de un barrio a otro...
+
+                    </p>
+                    <a href="{% url 'services'%}">Leer Mas</a>
+                </div>
+
+
+            </li>
+            <li>
+                <i class="fa-solid fa-truck"></i>
+                <div class="service-info">
+                    <h3>Transporte Eventos</h3>
+                    <p>
+                        En este servicio ofrecemos el transporte de sus eventos,
+                        ayudando a transportar ...
+
+                    </p>
+                    <a href="{% url 'services'%}">Leer Mas</a>
+                </div>
+            </li>
+            <li>
+                <i class="fa-solid fa-box-open"></i>
+                <div class="service-info">
+                    <h3>Servicio Embalaje</h3>
+                    <p>
+                        Empacamos correctamente sus muebles o enceres con material
+                        especializado para garantizar...
+
+                    </p>
+                    <a href="{% url 'services'%}">Leer Mas</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="sercices-description-bg">
+        <div class="sercices-description">
+            <h3>Servicios</h3>
+
+            <p>
+                Contamos con personal certificado para la manipulación de sus muebles.
+                nos encargamos de brindar un servicio puerta a puerta garantizando nuestros
+                servicios y contamos con una amplia experiencia.
+            </p>
+        </div>
+    </div>
+
+</div>
+<div class="comments">
+    <div class="comment-detail">
+        <h2 class="title">Comentarios</h2>
+        <p>
+            Descubre lo que piensan nuestros clientes y las experiencias que han
+            tenido con nuestros servicios.
+        </p>
+    </div>
+    <div class="comment-all">
+        <div class="item">
+            <div class="comillas">"</div>
+            <p> Nunc ultricies venenatis enim sed pharetra. Praesent ipsum eros,
+                rutrum ac porta id, varius a libero. Nulla sit amet magna at purus
+                vestibulum rhoncus et non ipsum. Donec dapibus volutpat felis, ac
+            </p>
+            <h4>Jose Vargas</h4>
+            <span>Cliente</span>
+        </div>
+
+        <div class="item">
+            <div class="comillas">"</div>
+            <p> Nunc ultricies venenatis enim sed pharetra. Praesent ipsum eros,
+                rutrum ac porta id, varius a libero. Nulla sit amet magna at purus
+                vestibulum rhoncus et non ipsum. Donec dapibus volutpat felis, ac
+            </p>
+            <h4>Juan Ramirez</h4>
+            <span>Director</span>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock  %}

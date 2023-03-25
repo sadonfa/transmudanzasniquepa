@@ -1,0 +1,269 @@
+@media screen and (max-width: 800px) {
+    .cont {
+        justify-content: space-around;
+    }
+
+    .cont .datos ul li {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+
+    .redes img {
+        width: 30px;
+    }
+
+    .header .description-detail h1 {
+        font-size: 38px;
+    }
+
+    .header .description-detail p {
+        font-size: 16px;
+    }
+
+    .detail-about,
+    .form-about {
+        width: 40%;
+    }
+
+    .sercices-description-bg {
+        width: 40%;
+    }
+
+    .services-detail {
+        width: 48%;
+        margin-left: 30px;
+    }
+
+    .sercices-description h3 {
+        font-size: 33px;
+    }
+
+    .services-detail ul li {
+        flex-basis: 45%;
+    }
+
+    .sercices-description-bg {
+        height: 900px;
+    }
+
+    .services {
+        width: 100%;
+        min-height: 900px;;
+    }
+
+    .services-detail {
+        width: 48%;
+        min-height: 740px;
+        margin-left: 30px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .comment-all {
+        margin-left: 50px;
+    }
+
+    .comments {
+        padding-left: 60px;
+    }
+
+    .detail-footer,
+    .gallery-footer,
+    .menu-footer {
+        width: 30%;
+    }
+
+    .menu-footer {
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .cont {
+        flex-direction: column;
+        padding-bottom: 15px;
+    }
+
+    .redes {
+        margin-left: 0px;
+    }
+
+    .cont .datos {
+        margin-right: 0px;
+
+    }
+
+    .cont .datos ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cont .datos ul li {
+        margin-top: 3px;
+        margin-bottom: 3px;
+        font-size: 14px;
+    }
+
+    .tels {
+        display: flex;
+    }
+
+    .nav {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    .nav .logo {
+        width: 50%;
+    }
+
+    .nav .menu ul li {
+        font-size: 12px;
+    }
+
+    .description-bg {
+        width: 100%;
+    }
+
+    .header .description-detail {
+        text-align: center;
+    }
+
+    .header .description-detail .btn {
+        margin: 0px auto;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .detail-about,
+    .form-about {
+        width: 80%;
+        margin: 0px auto;
+        text-align: center;
+    }
+
+    .form-about {
+        margin-top: 50px;
+    }
+
+    .form-about input[type="text"],
+    .form-about input[type="email"],
+    .form-about input[type="tel"],
+    .form-about textarea {
+        text-align: center;
+    }
+
+    .services {
+        flex-direction: column;
+    }
+
+    .services-detail {
+        height: 100%;
+        width: 50%;
+        margin-left: 0px;
+        /* padding-bottom: 20px; */
+    }
+
+    .sercices-description-bg {
+        width: 100%;
+    }
+
+    .services-detail ul li {
+        margin-right: 0px;
+    }
+
+    /* .services-detail{
+
+    } */
+    .comments {
+        flex-direction: column;
+        text-align: center;
+        padding-left: 0px;
+        padding: 15px;
+        padding-top: 50px;
+    }
+
+    .comment-all {
+        flex-direction: column;
+        margin-left: 0px;
+    }
+
+    .comment-all .item {
+        width: 75%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .detail-footer,
+    .gallery-footer,
+    .menu-footer {
+        width: 90%;
+        margin: 0px auto;
+        margin-bottom: 35px;
+    }
+
+    .footer .logo {
+        margin: 0px auto;
+    }
+
+    .menu-footer ul {
+        align-items: center;
+    }
+
+    .item-pg {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .item-pg .detail-item,
+    .item-pg .image-item {
+        width: 80%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .item-pg .image-item {
+        order: -1;
+    }
+
+    #contact {
+        flex-direction: column;
+        text-align: center; 
+    }
+
+    #contact .imagen-contact,
+    #contact .line-contacto {
+        width: 85%;
+        margin: 0px auto;
+    }
+
+    .form-contact {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .form,
+    .detail-contact,
+    .map-contact {
+        width: 85%;
+        margin: 0px auto;
+    }
+
+    .form-contact .form input[type="text"],
+    .form-contact .form input[type="tel"],
+    .form-contact .form input[type="email"],
+    .form-contact .form textarea {
+        text-align: center;
+    }
+
+    .form-contact .btn {
+        margin: 0px auto;
+    }
+}

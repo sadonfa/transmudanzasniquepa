@@ -1,0 +1,96 @@
+{% extends 'layout/index.html' %}
+{% load static %}
+
+{% block title %} Nosotros {% endblock  %} 
+
+{% block content %}
+    <header class="header-pg">
+        <div class="description-bg">
+            <div class="description-detail">
+                <h1>Contacto</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-pg">
+        
+    
+
+    <div class="form-contact">
+        <div class="form">
+            <h1 class="title">Contactanos</h1>
+
+            {% if form.errors %}
+            
+                <div class="danger">
+                    Hay errores en el formulario!!
+                </div>
+
+            {% endif %}
+
+            {% if messages %}
+            
+            {% for mess in messages  %}
+            
+            <div class="success" >
+                {{mess}}
+            </div>
+
+            {% endfor %}
+
+            {% endif %}
+
+            <form action="" method="POST" >
+                {% csrf_token %}
+                {% comment %} <input type="text" name="name" placeholder="Nombre" />
+                <input type="tel" name="phone" placeholder="Telefono" />
+                <input type="email" name="email" placeholder="Correo" />
+                <textarea name="message" rows="5" placeholder="Mensaje"></textarea> {% endcomment %}
+                
+                {{ form }}
+
+                <input type="submit" value="Enviar" class="btn" />
+            </form>
+        </div>
+        <div class="map-contact">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.31485036393!2d-74.06196580000001!3d4.7152674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f85308b4d5af9%3A0x4662bb2699934597!2sCra.%2054%20%23128b-53%2C%20Bogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1678842830498!5m2!1ses-419!2sco"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="detail-contact">
+            <h1 class="title">Informacion de Contacto</h1>
+            <ul>
+                <li><i class="fa-sharp fa-regular fa-location-dot"></i> Carrera 54 # 128b - 53 Bogotá</li>
+                <li><i class="fa-solid fa-phone"></i> 305 3118583</li>
+                <li><i class="fa-brands fa-whatsapp"></i> 320 9113178</li>
+                <li><i class="fa-solid fa-envelope"></i> info@transmudanzaniquepa.com</li>
+
+            </ul>
+            <div class="redes">
+                <img src="{% static 'images/facebookAz.png'%}" alt="Facebook">
+                <img src="{% static 'images/instagramAz.png'%}" alt="Instagram">
+                <img src="{% static 'images/twitterAz.png'%}" alt="Twitter">
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+
+        <div class="line-contacto">
+            <h1 class="title">Linea de Habilitadas</h1>
+            <p>
+                Nuestra atención es 24 horas, agende su transporte con anterioridad o
+                verifique nuestra disponibilidad. Tenemos servicios nacionales,
+                municipales y locales.
+            </p>
+            <span>320 9113178 - 305 3118583</span>
+        </div>
+
+        <div class="imagen-contact">
+            <img src="{% static 'images/contact.png'%}" alt="Contactos">
+        </div>
+
+    </div>
+
+     {% endblock  %}

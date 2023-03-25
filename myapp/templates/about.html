@@ -1,0 +1,52 @@
+{% extends 'layout/index.html' %}
+{% load static %}
+
+{% block title %} Nosotros {% endblock  %} 
+
+{% block content %}
+    <header class="header-pg">
+        <div class="description-bg">
+            <div class="description-detail">
+                <h1>Nosotros</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-pg">
+
+        <div class="item-pg">
+            <div class="detail-item">
+                <h2 class="title">¿Por Que Nosotros?</h2>
+                <p>
+                    Experiencia, responsabilidad, compromiso y atención personalizada
+                    hacen a nuestro servicio uno de los mejores.
+                    <br /><br />
+                    Nuestro experiencia nos ayuda a brindarles el servicio que usted
+                    necesita en términos de calidad, y a la vez siendo capaces de ofrecer el precio más competitivo del
+                    mercado.
+
+                </p>
+            </div>
+            <div class="image-item">
+                <img src="{% static 'images/3.png'%}" alt="foto1" />
+            </div>
+        </div>
+
+        <div class="item-pg">
+            <div class="image-item">
+                <img src="{% static 'images/2.png'%}" alt="foto1" />
+            </div>
+            <div class="detail-item">
+                <h2 class="title">¿Quienes Somos?</h2>
+                <p>
+                    Somos una empresa joven y capaz de adaptarse al cambio. Nuestro equipo
+                    de trabajo se enfoca en ofrecer un servicio de calidad con la mejor
+                    actitud y generando una experiencia positiva a nuestros clientes.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+     {% endblock  %}
